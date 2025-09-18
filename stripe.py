@@ -5,12 +5,12 @@ import time
 from telebot import types
 from retry import retry
 
-BOT_TOKEN = "7952774795:AAF2Eaew3lpdcWuEwhBoLwXd6v9NurixkFU"
-ADMIN_ID = 6622603977
-CHANNEL_USERNAME = "@privatecoree"
-APPROVED_GROUP_USERNAME = "@livechargeapproved"
+BOT_TOKEN = "8317245523:AAGWfRVn6JoUW20_Xmbfzh7N0R8ZpPxaOVg"
+ADMIN_ID = 8340881349
+CHANNEL_USERNAME = ""
+APPROVED_GROUP_USERNAME = ""
 
-AUTHORIZED_USERS = {6622603977}  # Add all authorized Telegram user IDs here
+AUTHORIZED_USERS = {8340881349}  # Add all authorized Telegram user IDs here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -122,7 +122,7 @@ def lookup_bin(bin_prefix: str) -> dict:
         return {}
 
 def build_card_message(card: str, status: str, status_str: str, gateway: str, bin_info: dict, time_taken: float, proxy_status: str) -> str:
-    owner_link = '<a href="tg://user?id=6622603977">𝑵𝒂𝒊𝒓𝒐𝒃𝒊𝒂𝒏𝒈𝒐𝒐𝒏</a>'
+    owner_link = '<a href="tg://user?id=8340881349">Spyde</a>'
     return f"""{status}
 ━━━━━━━━━━━━━
 [ϟ] 𝗖𝗖 - <code>{card}</code>
@@ -136,7 +136,7 @@ def build_card_message(card: str, status: str, status_str: str, gateway: str, bi
 ━━━━━━━━━━━━━
 [ϟ] T/t : {time_taken}s | Proxy : {proxy_status}
 [ϟ] 𝗢𝘄𝗻𝗲𝗿: {owner_link}
-╚━━━━━━「𝐀𝐏𝐏𝐑𝐎𝐕𝐄𝐃 𝐂𝐇𝐄𝐂𝐊𝐄𝐑」━━━━━━╝
+╚━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 """
 
 def is_member(user_id: int) -> bool:
